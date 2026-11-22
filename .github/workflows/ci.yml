@@ -1,5 +1,6 @@
 name: CI
-on: [push, pull_request]
+# 不自动运行，需要时在 Actions 页面手动触发。
+on: workflow_dispatch
 
 permissions:
   contents: read
