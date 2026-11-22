@@ -1,0 +1,82 @@
+[
+  {
+    "name": "dsh-edge-audit",
+    "description": "安全审计入口与模式选择。用于完整 Standard、Diff、Deep 审计及其恢复，不用于普通代码修改。",
+    "resources": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "name": "dsh-edge-discovery",
+    "description": "源码驱动的架构建图、自由发现和变体追踪。用于审计发现阶段，不作最终确认。",
+    "resources": [
+      "SKILL.md",
+      "references/web-auth.md",
+      "references/client.md",
+      "references/api-messaging.md",
+      "references/ai-agent.md",
+      "references/supply-chain.md",
+      "references/cloud.md",
+      "references/tenant-lifecycle.md",
+      "references/resources.md",
+      "references/desktop.md",
+      "references/native-memory.md",
+      "references/attack-classes.md",
+      "references/threat-model.md",
+      "references/full/web-auth.md",
+      "references/full/client.md",
+      "references/full/api-messaging.md",
+      "references/full/ai-agent.md",
+      "references/full/supply-chain.md",
+      "references/full/cloud.md",
+      "references/full/tenant-lifecycle.md",
+      "references/full/resources.md",
+      "references/full/desktop.md",
+      "references/full/native-memory.md"
+    ]
+  },
+  {
+    "name": "dsh-edge-coverage",
+    "description": "覆盖账本、缺口补派与独立 Critic。用于全量审计的覆盖检查，不判断漏洞是否成立。",
+    "resources": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "name": "dsh-edge-validation",
+    "description": "对源码候选作独立反证、类别证明与最终记录复核。不将静态结论冒充已执行复现。",
+    "resources": [
+      "SKILL.md",
+      "references/false-positive-precedents.md"
+    ]
+  },
+  {
+    "name": "dsh-edge-attack-path",
+    "description": "独立复核攻击者到结果的路径与机械定级。仅用于已有独立验证的候选。",
+    "resources": [
+      "SKILL.md",
+      "references/severity-policy.md"
+    ]
+  },
+  {
+    "name": "dsh-edge-remediation",
+    "description": "审查精确补丁、变更风险、应用与独立复验。仅在用户要求修复时使用。",
+    "resources": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "name": "dsh-edge-report",
+    "description": "输出有来源、证据分级和可复现边界的安全报告；适用于审计结论、漏洞写作与导出。",
+    "resources": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "name": "dsh-edge-triage",
+    "description": "核对外部漏洞线索、历史误报反馈与状态。用于公告、扫描器、工单或既有发现的复核。",
+    "resources": [
+      "SKILL.md"
+    ]
+  }
+]

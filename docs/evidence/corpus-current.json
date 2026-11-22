@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "kind": "deterministic-candidate-location-benchmark",
+  "generatedAt": "2026-10-29T07:18:11.496Z",
+  "source": "src/scanner.ts",
+  "limits": {
+    "maxFiles": 500,
+    "maxFileBytes": 262144
+  },
+  "cases": [
+    {
+      "id": "js-three-hop",
+      "durationMs": 21.906,
+      "truePositives": [
+        "shell-command-construction:sink.js:2"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "ts-assignment-chain",
+      "durationMs": 5.102,
+      "truePositives": [
+        "shell-command-construction:sink.ts:3"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "python-three-hop",
+      "durationMs": 3.787,
+      "truePositives": [
+        "shell-command-construction:sink.py:3"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "go-three-hop",
+      "durationMs": 2.156,
+      "truePositives": [
+        "shell-command-construction:sink.go:3"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "php-three-hop",
+      "durationMs": 2.799,
+      "truePositives": [
+        "shell-command-construction:sink.php:3"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "java-three-hop",
+      "durationMs": 2.901,
+      "truePositives": [
+        "shell-command-construction:Sink.java:3"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "js-bound-query",
+      "durationMs": 1.325,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "python-bound-query",
+      "durationMs": 0.487,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "go-bound-query",
+      "durationMs": 0.563,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "php-bound-query",
+      "durationMs": 0.498,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "java-bound-query",
+      "durationMs": 0.473,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "js-safe-sibling-scope",
+      "durationMs": 1.383,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "python-safe-sibling-scope",
+      "durationMs": 0.52,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "ruby-local-call",
+      "durationMs": 0.943,
+      "truePositives": [
+        "shell-command-construction:entry.rb:2"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "c-local-call",
+      "durationMs": 0.8,
+      "truePositives": [
+        "shell-command-construction:entry.c:2"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "cpp-local-call",
+      "durationMs": 0.484,
+      "truePositives": [
+        "shell-command-construction:entry.cpp:2"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "rust-local-call",
+      "durationMs": 0.713,
+      "truePositives": [
+        "shell-command-construction:entry.rs:2"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "csharp-local-call",
+      "durationMs": 0.773,
+      "truePositives": [
+        "shell-command-construction:entry.cs:2"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "go-gin-path-parameter",
+      "durationMs": 0.462,
+      "truePositives": [
+        "shell-command-construction:handler.go:3"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "python-typed-cross-file",
+      "durationMs": 0.611,
+      "truePositives": [
+        "shell-command-construction:sink.py:3"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "php-dynamic-include",
+      "durationMs": 0.331,
+      "truePositives": [
+        "dynamic-include:index.php:2"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "js-function-constructor",
+      "durationMs": 0.891,
+      "truePositives": [
+        "dangerous-dynamic-code:entry.js:1"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "php-safe-sibling-scope",
+      "durationMs": 0.405,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "java-safe-sibling-scope",
+      "durationMs": 0.397,
+      "truePositives": [],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    },
+    {
+      "id": "js-large-late-source",
+      "durationMs": 5.873,
+      "truePositives": [
+        "dangerous-dynamic-code:large.js:1002"
+      ],
+      "falsePositives": [],
+      "missed": [],
+      "invalidLocations": [],
+      "complete": true
+    }
+  ],
+  "metrics": {
+    "truePositives": 16,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "candidatePrecision": 1,
+    "candidateRecall": 1,
+    "invalidLocations": 0,
+    "durationMs": 56.583,
+    "confirmedPrecision": null,
+    "validatedRecall": null,
+    "modelTokens": null,
+    "modelCost": null
+  },
+  "limitations": [
+    "候选检出和定位质量，不等同独立验证召回率或 Confirmed Precision。",
+    "semantic 样本需真实模型和独立验证；本脚本不将固定模型结果作为 benchmark。"
+  ]
+}

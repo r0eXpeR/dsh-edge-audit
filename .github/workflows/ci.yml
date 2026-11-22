@@ -1,0 +1,45 @@
+name: CI
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - run: npm run check:skills
+      - run: npm run check:dsh-runtime
+      - name: npm test
+        shell: bash
+        run: |
+          set -o pipefail
+          npm test 2>&1 | tee test-output.log
+      # 把失败用例的名称和错误信息写成 annotation，便于在 Checks 页面直接查看原因。
+      - name: Report failing tests
+        if: failure()
+        shell: bash
+        run: |
+          [ -f test-output.log ] || exit 0
+          node -e '
+            const lines = require("node:fs").readFileSync("test-output.log", "utf8").split("\n")
+            const escape = value => value.replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A")
+            for (let i = 0; i < lines.length; i++) {
+              const match = /^\s*not ok \d+ - (.+)$/.exec(lines[i])
+              if (!match) continue
+              const detail = []
+              for (let j = i + 1; j < lines.length && detail.length < 25 && !/^\s*(not )?ok \d+ - /.test(lines[j]); j++) detail.push(lines[j])
+              console.log(`::error title=${escape(match[1]).slice(0, 200)}::${escape(detail.join("\n")).slice(0, 4000)}`)
+            }
+          '
+      - run: npm pack --dry-run

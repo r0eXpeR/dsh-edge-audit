@@ -1,0 +1,134 @@
+{
+  "name": "dsh-edge-audit",
+  "version": "0.58.0",
+  "description": "面向 DeepSeek Harness（DSH）的证据驱动代码安全审计插件：确定性 AST/数据流分析 + 多 Session 独立验证 + 覆盖账本 + 可复验报告",
+  "license": "Apache-2.0",
+  "author": "r0eXpeR",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r0eXpeR/dsh-edge-audit.git"
+  },
+  "homepage": "https://github.com/r0eXpeR/dsh-edge-audit#readme",
+  "bugs": "https://github.com/r0eXpeR/dsh-edge-audit/issues",
+  "type": "module",
+  "private": false,
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "docs/evidence-contract.md",
+    "docs/security-source-attribution.md",
+    "docs/prompts",
+    "docs/licenses",
+    "LICENSE",
+    "NOTICE",
+    "skills"
+  ],
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\" && node scripts/validate-skills.mjs && tsc -p tsconfig.json",
+    "prepack": "npm run build 1>&2",
+    "check:dsh-runtime": "node scripts/check-dsh-runtime.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --import tsx --test \"tests/**/*.test.ts\"",
+    "test:desktop": "node scripts/desktop-sandbox.mjs",
+    "benchmark:golden": "node --import tsx scripts/golden-corpus.mjs",
+    "check:skills": "node scripts/validate-skills.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.0.5",
+    "@deepseek-ai/dsh-agent": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-llm": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-session": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-system-prompt": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-util-values": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-working-directory": "0.2.1-rc.5",
+    "@deepseek-ai/schemastery": "3.18.5",
+    "@deepseek-ai/dsh-skill": "0.2.1-rc.5"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.5",
+    "@deepseek-ai/dsh-agent": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-agent-loop": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-llm": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-session": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-session-projection": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-skill": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-system-prompt": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-util-values": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-working-directory": "0.2.1-rc.5",
+    "@deepseek-ai/schemastery": "3.18.5",
+    "@types/node": "^22.20.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "security",
+    "code-audit",
+    "appsec",
+    "edgeaudit",
+    "edgesecurity",
+    "deepseek",
+    "sast",
+    "security-audit",
+    "vulnerability-detection",
+    "llm-security",
+    "sarif"
+  ],
+  "dependencies": {
+    "@typescript-eslint/typescript-estree": "^8.67.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-agent": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-llm": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-session": {
+      "optional": true
+    },
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-system-prompt": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-working-directory": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-util-values": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-skill": {
+      "optional": true
+    }
+  }
+}

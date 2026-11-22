@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.sandbox/
+.artifacts/
+*.tgz
+/docs/evidence/audit-review-*.json
+.DS_Store
+.env
+.env.*
+!.env.example
+!.env.sample
+/.npmrc

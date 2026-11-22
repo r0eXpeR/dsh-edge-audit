@@ -1,0 +1,146 @@
+{
+  "baseline": {
+    "runs": [
+      {
+        "truePositives": 6,
+        "falsePositives": 5,
+        "falseNegatives": 10,
+        "candidatePrecision": 0.5454545454545454,
+        "candidateRecall": 0.375,
+        "invalidLocations": 2,
+        "durationMs": 52.491,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 6,
+        "falsePositives": 5,
+        "falseNegatives": 10,
+        "candidatePrecision": 0.5454545454545454,
+        "candidateRecall": 0.375,
+        "invalidLocations": 2,
+        "durationMs": 55.298,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 6,
+        "falsePositives": 5,
+        "falseNegatives": 10,
+        "candidatePrecision": 0.5454545454545454,
+        "candidateRecall": 0.375,
+        "invalidLocations": 2,
+        "durationMs": 51.629,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 6,
+        "falsePositives": 5,
+        "falseNegatives": 10,
+        "candidatePrecision": 0.5454545454545454,
+        "candidateRecall": 0.375,
+        "invalidLocations": 2,
+        "durationMs": 53.758,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 6,
+        "falsePositives": 5,
+        "falseNegatives": 10,
+        "candidatePrecision": 0.5454545454545454,
+        "candidateRecall": 0.375,
+        "invalidLocations": 2,
+        "durationMs": 52.162,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      }
+    ],
+    "medianDurationMs": 52.491,
+    "minDurationMs": 51.629,
+    "maxDurationMs": 55.298
+  },
+  "current": {
+    "runs": [
+      {
+        "truePositives": 16,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "candidatePrecision": 1,
+        "candidateRecall": 1,
+        "invalidLocations": 0,
+        "durationMs": 59.669,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 16,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "candidatePrecision": 1,
+        "candidateRecall": 1,
+        "invalidLocations": 0,
+        "durationMs": 54.166,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 16,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "candidatePrecision": 1,
+        "candidateRecall": 1,
+        "invalidLocations": 0,
+        "durationMs": 54.652,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 16,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "candidatePrecision": 1,
+        "candidateRecall": 1,
+        "invalidLocations": 0,
+        "durationMs": 55.721,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      },
+      {
+        "truePositives": 16,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "candidatePrecision": 1,
+        "candidateRecall": 1,
+        "invalidLocations": 0,
+        "durationMs": 75.507,
+        "confirmedPrecision": null,
+        "validatedRecall": null,
+        "modelTokens": null,
+        "modelCost": null
+      }
+    ],
+    "medianDurationMs": 55.721,
+    "minDurationMs": 54.166,
+    "maxDurationMs": 75.507
+  }
+}

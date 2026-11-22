@@ -1,0 +1,27 @@
+EdgeAudit (formerly dsh-fonshang-audit)
+
+This project is derived from dsh-security-suite 0.54.28
+(https://github.com/Zenquiem/dsh-security-suite), licensed under Apache-2.0.
+The DSH plugin structure, scan workflows, receipt-gated validation, tracking
+and export features originate from that project and have been modified.
+
+This Apache-2.0 development includes existing adapted worker prompts, evidence
+contracts and workflow concepts from OpenAI Codex Security (Apache-2.0).
+Local reference: @openai/codex-security 0.8.0, gitHead
+71bd7ae0e9bc859fb8fe9bc4b590b8f8998b19aa. Published 0.8.1 was reviewed separately.
+
+Coverage-led audit, fresh verifier and companion-selection design references:
+security-audit-skill, Copyright (c) 2025-2026 Cloudflare, Inc. (MIT).
+Commit c1c8a8c1471069fb0e188eeaff69b8e8db6564a8.
+
+Contextual PR review and adversarial false-positive review references:
+claude-code-security-review, Copyright (c) 2025 Anthropic (MIT).
+Commit 0c6a49f1fa56a1d472575da86a94dbc1edb78eda.
+
+The packaged skills under skills/ adapt these references; skills/dsh-edge-discovery/
+references/full/ contains verbatim Cloudflare companions under their MIT license.
+
+New DSH-native implementations are not an installation or redistribution of
+upstream executable runtimes, Hooks, native MCP binaries or hosted services.
+Full reference licenses and detailed modifications are recorded in
+ docs/licenses/ and docs/security-source-attribution.md.
