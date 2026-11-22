@@ -21,7 +21,6 @@ English: EdgeAudit is a code security audit plugin for DeepSeek Harness. It comb
 - [安全模型](#安全模型)
 - [开发与测试](#开发与测试)
 - [常见问题](#常见问题)
-- [从 dsh-fonshang-audit 迁移](#从-dsh-fonshang-audit-迁移)
 - [来源与许可](#来源与许可)
 
 ## 功能
@@ -341,20 +340,6 @@ npm run benchmark:golden
 **macOS 上提示沙箱不可用**
 
 `executable` 必须是绝对路径，`image` 必须是 `sha256:` 开头的本地镜像 ID（`docker image inspect --format '{{.Id}}' <镜像>`）。使用 Colima 或 OrbStack 时需要设置 `validationSandbox.socket`。
-
-## 从 dsh-fonshang-audit 迁移
-
-0.58.0 起项目改名为 EdgeAudit，包名、插件 id 和 Skill 名称都已变更：
-
-1. 卸载旧插件：`dsh plugin --profile desktop remove dsh-fonshang-audit`，再按上文安装新包。
-2. 把 `cordis.patch.yml` 中的 `id: dsh-fonshang-audit` 改为 `id: dsh-edge-audit`，其他配置不变。
-3. 提示词或脚本中引用的 Skill 名称从 `dsh-fonshang-*` 改为 `dsh-edge-*`。
-
-以下内容无需处理：
-
-- 如果 `~/.dsh-edge-audit` 不存在，插件会继续使用 `~/.dsh-fonshang-audit`（以及更早的 `~/.dsh-security-suite`），历史审计可以照常查询和恢复。
-- 环境变量 `DSH_FONSHANG_AUDIT_STATE_DIR` 继续有效，`DSH_EDGE_AUDIT_STATE_DIR` 优先。
-- 旧版本创建的工单和安全通告仍能被识别为重复项，不会重复创建。
 
 ## 来源与许可
 
